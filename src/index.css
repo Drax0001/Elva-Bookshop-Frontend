@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .link {
+    @apply
+    w-full
+    bg-primaryColor
+    rounded
+    text-center
+    py-2
+    transition-all duration-150 
+  }
+  .active-link {
+    @apply
+    font-bold
+    text-[#eddedf]
+    bg-secondaryColor
+    w-full
+    rounded
+    text-center
+    py-2
+  }
+  .btn {
+    @apply
+    px-4
+    py-2
+    font-bold
+    text-xl
+    rounded-lg
+    border-2
+  }
+  .btn-primary {
+    @apply
+    bg-primaryColor
+    text-secondaryColor
+    border-secondaryColor
+  }
+  .btn-secondary {
+    @apply 
+    text-neutral
+    
+  }
+  .input-field {
+    @apply
+    border-2
+    border-secondaryColor
+    rounded-lg
+    w-full
+    mt-2
+    mb-4
+    p-2
+    font-bold
+  }
+}
+
+input, textarea {
+  transition: outline 0.15s ease;
+}
+
+input:focus, textarea:focus, button:focus, a:focus {
+  outline: 0.2em solid #c0ded9;
+}
+
+.infinite-loader {
+  background-color: chocolate;
+  border-radius: 50%;
+  animation-name: loading;
+  animation-duration: 0.8s;
+  /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+  animation-iteration-count: infinite;
+  height: 5rem;
+  width: 5rem;
+}
+
+@keyframes loading {
+  0% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(1.4);
+    opacity: 0.8;
+  }
+  40% {
+    transform: scale(1.6);
+    opacity: 0.6;
+  }
+  60% {
+    transform: scale(1.8);
+    opacity: 0.4;
+  }
+  80% {
+    transform: scale(2.0);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
